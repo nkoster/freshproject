@@ -1,6 +1,7 @@
 import {Head} from '$fresh/runtime.ts'
 import {useSignal} from '@preact/signals'
 import Counter from '../islands/Counter.tsx'
+import GlobalCounter from '../islands/GlobalCounter.tsx'
 
 export default function Home() {
   const count = useSignal(3)
@@ -21,6 +22,7 @@ export default function Home() {
           ./routes/index.tsx file, and refresh.
         </p>
         <Counter count={count}/>
+        <GlobalCounter />
       </div>
     </>
   )
